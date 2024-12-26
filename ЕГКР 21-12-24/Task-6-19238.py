@@ -28,4 +28,4 @@ for x in range(-10, 100):
         dot(3, 'red')
 
 update()
-input()
+done()
