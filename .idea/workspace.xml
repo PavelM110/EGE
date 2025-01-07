@@ -1,46 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/EGE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 24&#10;Так как подстрока, являющаяся ответом находится в середине файла, к ответу прибавляем 6 ('SRQ' и 'FSR' в начале и в конце подстроки)">
+      <change beforePath="$PROJECT_DIR$/.idea/EGE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EGE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/PavelM110/EGE.git",
-    "accountId": "f186b15a-1cfb-4c4b-aa12-d75afcac9498"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PavelM110&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PavelM110/EGE.git&quot;,
+    &quot;accountId&quot;: &quot;2e928877-80b2-49a9-9a20-e56fb64155fe&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2qcYL248M3s67Z3XqCa66GxgfHP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Task-1-19233.executor": "Run",
+    "Python.Task-12-19244.executor": "Run",
+    "Python.Task-15-19247.executor": "Run",
+    "Python.Task-16-19248.executor": "Run",
+    "Python.Task-2-19234.executor": "Run",
+    "Python.Task-6-19238.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -53,6 +77,82 @@
       <option name="presentableId" value="Default" />
       <updated>1734963272069</updated>
     </task>
+    <task id="LOCAL-00001" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 1">
+      <option name="closed" value="true" />
+      <created>1735062563337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735062563337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 2">
+      <option name="closed" value="true" />
+      <created>1735062902815</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735062902815</updated>
+    </task>
+    <task id="LOCAL-00003" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6&#10;Turtle и PyCharm работают странно, после смены окна Python не отвечает, также приходитися заставлять в конце ждать ввода, т.к. Python автоматически закрывается после выполнения всего кода.">
+      <option name="closed" value="true" />
+      <created>1735063875494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735063875494</updated>
+    </task>
+    <task id="LOCAL-00004" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 9">
+      <option name="closed" value="true" />
+      <created>1735064731307</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735064731307</updated>
+    </task>
+    <task id="LOCAL-00005" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 12">
+      <option name="closed" value="true" />
+      <created>1735132598564</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735132598564</updated>
+    </task>
+    <task id="LOCAL-00006" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 15">
+      <option name="closed" value="true" />
+      <created>1735132959694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735132959694</updated>
+    </task>
+    <task id="LOCAL-00007" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 16">
+      <option name="closed" value="true" />
+      <created>1735134417336</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735134417336</updated>
+    </task>
+    <task id="LOCAL-00008" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 24&#10;Так как подстрока, являющаяся ответом находится в середине файла, к ответу прибавляем 6 ('SRQ' и 'FSR' в начале и в конце подстроки)">
+      <option name="closed" value="true" />
+      <created>1735135894465</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735135894465</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 1" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 2" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6&#10;Turtle и PyCharm работают странно, после смены окна Python не отвечает, также приходитися заставлять в конце ждать ввода, т.к. Python автоматически закрывается после выполнения всего кода." />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 9" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 12" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 15" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 16" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 24&#10;Так как подстрока, являющаяся ответом находится в середине файла, к ответу прибавляем 6 ('SRQ' и 'FSR' в начале и в конце подстроки)" />
+    <option name="LAST_COMMIT_MESSAGE" value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 24&#10;Так как подстрока, являющаяся ответом находится в середине файла, к ответу прибавляем 6 ('SRQ' и 'FSR' в начале и в конце подстроки)" />
   </component>
 </project>
