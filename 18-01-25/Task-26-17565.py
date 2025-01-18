@@ -13,7 +13,7 @@ if prohod[-1][1] == data_sum[s][1]:
     while prohod[-1][1] == data_sum[s][1]:
         prohod = prohod[:-1]
 
-half_prohod = [i for i in data_sum if i[1] == 154]
+half_prohod = [i for i in data_sum if i[1] == data_sum[s][1]]
 
 prohod = sorted(prohod, key=lambda x: (-x[1], -x[-1], -x[0]))
 
