@@ -1,63 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЕГКР 21-12-24/Task-1-19233.py" beforeDir="false" afterPath="$PROJECT_DIR$/ЕГКР 21-12-24/Task-1-19233.py" afterDir="false" />
+    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/EGE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;PavelM110&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/PavelM110/EGE.git",
+    "accountId": "f186b15a-1cfb-4c4b-aa12-d75afcac9498"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/PavelM110/EGE.git&quot;,
-    &quot;accountId&quot;: &quot;f186b15a-1cfb-4c4b-aa12-d75afcac9498&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2qcYL248M3s67Z3XqCa66GxgfHP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Task-1-1845.executor": "Debug",
-    "Python.Task-14-19246.executor": "Run",
-    "Python.Task-5-19237.executor": "Run",
-    "Python.Task-6-19238.executor": "Run",
-    "Python.Task-8-19240.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "git-widget-placeholder": "master"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -76,48 +53,6 @@
       <option name="presentableId" value="Default" />
       <updated>1734963272069</updated>
     </task>
-    <task id="LOCAL-00001" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 8">
-      <option name="closed" value="true" />
-      <created>1734967889021</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1734967889021</updated>
-    </task>
-    <task id="LOCAL-00002" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 14">
-      <option name="closed" value="true" />
-      <created>1734968263006</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1734968263006</updated>
-    </task>
-    <task id="LOCAL-00003" summary="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6">
-      <option name="closed" value="true" />
-      <created>1735220420321</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1735220420321</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 8" />
-    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 14" />
-    <MESSAGE value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="https://kompege.ru/variant?kim=25073855&#10;&#10;Task 6" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/26-12-24/Task-1-1845.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
