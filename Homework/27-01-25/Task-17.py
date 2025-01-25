@@ -7,7 +7,7 @@ def f1(n):
     return n**2 < min_2**2
 
 for i in data:
-    if len(str(i).strip('-')) == 2:
+    if len(str(i).strip('-')) == 2 and abs(i) % 10 == 1:
         min_2 = min(min_2, i)
 
 print(min_2)
