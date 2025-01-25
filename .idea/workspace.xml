@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/EGE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dd1693b9-c101-4a2c-91d9-e59ecc009dcc" name="Changes" comment="https://kompege.ru/variant?kim=25076679&#10;&#10;Task-26-3&#10;&#10;Исправлено">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "PavelM110"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/PavelM110/EGE.git",
-    "accountId": "f186b15a-1cfb-4c4b-aa12-d75afcac9498"
+    "accountId": "2e928877-80b2-49a9-9a20-e56fb64155fe"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2qcYL248M3s67Z3XqCa66GxgfHP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Task-2-454.executor": "Run",
+    "Python.Task-2-78.executor": "Run",
+    "Python.Task-2-960.executor": "Run",
+    "Python.Task-26-17565.executor": "Run",
+    "Python.Tassk-2-816.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\EGE\Homework\20-01-25" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -53,6 +78,64 @@
       <option name="presentableId" value="Default" />
       <updated>1734963272069</updated>
     </task>
+    <task id="LOCAL-00001" summary="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 18">
+      <option name="closed" value="true" />
+      <created>1737276901387</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737276901387</updated>
+    </task>
+    <task id="LOCAL-00002" summary="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-1">
+      <option name="closed" value="true" />
+      <created>1737276917421</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737276917421</updated>
+    </task>
+    <task id="LOCAL-00003" summary="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-2">
+      <option name="closed" value="true" />
+      <created>1737277152834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737277152834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-3">
+      <option name="closed" value="true" />
+      <created>1737277320154</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737277320154</updated>
+    </task>
+    <task id="LOCAL-00005" summary="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-4">
+      <option name="closed" value="true" />
+      <created>1737277523569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737277523569</updated>
+    </task>
+    <task id="LOCAL-00006" summary="https://kompege.ru/variant?kim=25076679&#10;&#10;Task-26-3&#10;&#10;Исправлено">
+      <option name="closed" value="true" />
+      <created>1737295934217</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737295934217</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 18" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-1" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-2" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-3" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25076534&#10;&#10;Task 2-4" />
+    <MESSAGE value="https://kompege.ru/variant?kim=25076679&#10;&#10;Task-26-3&#10;&#10;Исправлено" />
+    <option name="LAST_COMMIT_MESSAGE" value="https://kompege.ru/variant?kim=25076679&#10;&#10;Task-26-3&#10;&#10;Исправлено" />
   </component>
 </project>
