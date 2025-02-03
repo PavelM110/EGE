@@ -19,4 +19,4 @@ for n in range(0, 1000):
     if r < 1996:
         res.append(r)
 
-print(min(res))
+print(max(res))
