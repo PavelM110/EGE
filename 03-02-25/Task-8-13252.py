@@ -1,9 +1,9 @@
 from itertools import permutations
 
-alph = 'кидал'
+alph = 'кидала'
 cnt = 0
 
-for i in permutations(alph):
+for i in set(permutations(alph, 5)):
     i = ''.join(i)
     if 'аа' not in i: cnt += 1
 
