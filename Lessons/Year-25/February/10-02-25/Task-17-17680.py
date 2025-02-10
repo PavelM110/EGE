@@ -7,7 +7,7 @@ ans = []
 
 for i in range(len(data) - 1):
     a, b = data[i:i+2]
-    u1 = len((a, b)) == len(set((a, b)))
+    u1 = a != b
     u2 = abs(a - b) % min_41 == 0
     if u1 and u2: ans.append(a+b)
 
