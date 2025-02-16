@@ -12,7 +12,7 @@ def f2(arr):
 
 cnt = 0
 
-for i in data:
-    if f1(i) and f2(i): cnt += 1
-
-print(cnt)
+for p, i in list(enumerate(data, start=1))[::-1]:
+    if f1(i) and f2(i):
+        print(p)
+        break
