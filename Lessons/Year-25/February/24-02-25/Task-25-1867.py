@@ -8,12 +8,11 @@ def f(n):
     for i in divs:
         if i != 8 and i % 10 == 8: return i
 
-ans = []
+cnt = 0
 
 for i in range(500001, 10**9):
     n = f(i)
     if n:
-        ans.append((i, n))
-    if len(ans) == 5: break
-
-print(ans)
+        print(i, n)
+        cnt += 1
+        if cnt == 5: break
