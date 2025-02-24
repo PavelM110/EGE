@@ -12,10 +12,10 @@ ans = []
 
 flag = True
 
-for v in '123456':
+for r in range(11):
     if not flag: continue
-    for r in range(10):
-        for z in product('0123456', repeat=r):
+    for z in product('0123456', repeat=r):
+        for v in '0123456':
             num_7 = f'{v}213{''.join(z)}5664'
             num = int(num_7, 7)
             if num > 10**9: flag = False
@@ -23,6 +23,10 @@ for v in '123456':
                 ans.append((num, num // 333))
 
 ans = sorted(ans)
+
+print(ans)
+
+print(flag)
 
 ans1 = []
 
