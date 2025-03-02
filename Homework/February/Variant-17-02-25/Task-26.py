@@ -5,7 +5,7 @@ with open('26.txt') as file:
 # for i in range(len(duels)):
 #     duels[i] = (duels[i][0], duels[i][0] + duels[i][1])
 
-duels = sorted(duels, key=lambda x: (x[1] + x[0], -x[0]))
+duels = sorted(duels, key=lambda x: (x[1] + x[0], x[0]))
 
 accepted = [duels[0]]
 
