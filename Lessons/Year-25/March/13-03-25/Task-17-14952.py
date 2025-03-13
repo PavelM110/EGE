@@ -5,17 +5,13 @@ max_121 = max(i for i in data if abs(i) % 1000 == 121)
 
 ans = []
 
+l = range(1000, 9999, 2)
+
 for i in range(len(data) - 2):
     a, b, c = data[i:i+3]
-    ua4 = 1000 <= abs(a) <= 9999
-    ub4 = 1000 <= abs(b) <= 9999
-    uc4 = 1000 <= abs(c) <= 9999
-    ua2 = abs(a) % 2 == 0
-    ub2 = abs(b) % 2 == 0
-    uc2 = abs(c) % 2 == 0
-    ua = ua4 and ua2
-    ub = ub4 and ub2
-    uc = uc4 and uc2
+    ua = abs(a) in l
+    ub = abs(b) in l
+    uc = abs(c) in l
     f1 = ua + ub + uc <= 1
     summ = a + b + c
     f2 = summ <= max_121
