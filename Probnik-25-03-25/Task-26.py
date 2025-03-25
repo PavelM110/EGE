@@ -1,6 +1,8 @@
+from math import ceil
+
 with open('2600.txt') as file:
     n = int(file.readline())
-    data = [(int(i.split()[0]), int(i.split()[0]) + int(int(i.split()[1]) / 10) + 1, int(i.split()[1])) for i in file if i]
+    data = [(int(i.split()[0]), int(i.split()[0]) + ceil(int(i.split()[1]) / 10), int(i.split()[1])) for i in file if i]
 
 data = sorted(data, key=lambda x: (x[1], x[0]))
 

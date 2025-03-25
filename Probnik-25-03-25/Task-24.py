@@ -7,7 +7,7 @@ for i in '3579':
 for i in '468':
     data = data.replace(i, '2')
 
-data = data.replace('-', '*')
+data = data.replace('+', '*')
 
 data = data.replace('**', ' ').replace(' *', ' ').replace('* ', ' ')
 
