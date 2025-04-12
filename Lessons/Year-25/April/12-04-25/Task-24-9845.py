@@ -5,6 +5,8 @@ with open('24_9845.txt') as file:
 
 pat = r'((((?<=[89])[ABC][89])|((?<=[ABC])[89][ABC])))+'
 
+pat = r'(?<=([ABC]{2}|[89]{2})).+?(?=([ABC]{2}|[89]{2}))'
+
 matches = finditer(pat, data)
 
 matches = [i.group() for i in matches]
