@@ -5,6 +5,6 @@ a_list = [int(''.join(i), 2) for i in product('01', repeat=8) if '01' not in ''.
 
 for a in a_list:
     net = ip_network(f'246.51.128.202/255.255.{a}.0', False)
-    if all(f'{int(i):032b}'[:16].count('0') <= f'{int(i):032b}'[17:].count('0') for i in net):
+    if all(f'{int(i):032b}'[:16].count('0') <= f'{int(i):032b}'[16:].count('0') for i in net):
             print(a)
             break
