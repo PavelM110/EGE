@@ -2,7 +2,7 @@ from itertools import permutations
 
 cnt = 0
 
-for i in permutations('01234567'):
+for i in permutations('01234567', 6):
     if i[0] != '0':
         i = ''.join(i)
         st = i
