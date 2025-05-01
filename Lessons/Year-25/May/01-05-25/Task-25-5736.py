@@ -16,7 +16,7 @@ cnt = 5
 for i in range(10**9 + 1, 10**20):
     if pal(i):
         n = f(i)
-        if n:
+        if n % 7 == 0:
             print(i, n)
             cnt -= 1
             if not cnt:
