@@ -1,6 +1,6 @@
 from math import dist
 
-with open('../../March/27-03-25/27B_19747.txt') as file:
+with open('27B_19747.txt') as file:
     cluster1 = []
     cluster2 = []
     cluster3 = []

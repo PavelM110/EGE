@@ -1,6 +1,6 @@
 from math import dist
 
-with open('../../March/27-03-25/27B_18623.txt') as file:
+with open('27B_18623.txt') as file:
     data = [list(map(float, i.split())) for i in file if i]
 
 def centroid(cluster):
