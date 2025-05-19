@@ -1,4 +1,4 @@
-for n in range(1, 10000):
+for n in range(2, 10000):
     r = bin(n)[2:]
     ch_1 = 0
     n_0 = 0
