@@ -4,7 +4,6 @@ from re import *
 with open('24_9791 (1).txt') as file:
     data = file.readline()
 
-
 pat = r'[1-9A-F][\dA-F]*'
 
 matches = finditer(pat, data)
