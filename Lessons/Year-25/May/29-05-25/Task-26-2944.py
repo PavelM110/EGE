@@ -1,0 +1,20 @@
+with open('26_2944.txt') as file:
+    s, n = map(int, file.readline().split())
+    data = [int(i) for i in file if i]
+
+data = sorted(data)
+
+saved = []
+
+for i in data:
+    if sum(saved) + i <= s:
+        saved.append(i)
+
+print(len(saved))
+
+saved = saved[:-1]
+
+for i in sorted(data, reverse=True):
+    if sum(saved) + i <= s:
+        print(i)
+        break
