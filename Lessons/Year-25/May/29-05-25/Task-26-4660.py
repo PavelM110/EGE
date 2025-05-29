@@ -14,6 +14,8 @@ for i in range(len(data)):
 
 print(summ)
 
+print((sum(data) - sum(data[3::4])) + sum(data[3::4]) // 2)
+
 data = sorted(data)
 
 print((sum(data[:n//4]) // 2) + sum(data[n//4:]))
