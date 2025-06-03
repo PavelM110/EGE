@@ -1,0 +1,41 @@
+Все возможные комбинации определенной длины:
+from itertools import product
+alph = '1234' # алфавит из условия задания
+length = 5 # длина комбинаций из условия
+for i in product(alph, repeat=length):
+   i = ''.join(i)
+
+Все возможные перестановки:
+from itertools import permutations
+alph = '1234' # алфавит из условия задания
+for i in set(permutations(alph)):
+   i = ''.join(i)
+
+Тип заданий с пронумерованным списком комбинаций:
+from itertools import product
+alph = 'ДВИАЬ' # алфавит из условия
+# если слова в алфавитном порядке
+alph = sorted(alph)
+# если слова в обратном алфавитном порядке
+alph = sorted(alph, reverse=True)
+for pos, val in enumerate(product(alph, repeat=5), start=1):
+   val = ''.join(val)
+
+===========================================================
+
+1. Если работаешь с формированием чисел, проверь, не стоит ли ноль в начале
+    if i[0] != '0':
+2. Проверка, что символ встречается в комбинации
+    if 'A' in i:
+3. Проверка, что символ не встречается в комбинации
+    if 'A' not in i:
+4. Проверка, что символ встречается в комбинации 3 раза
+    if i.count('A') == 3:
+5. Проверка, что четность символов чередуется
+    u = ''.join([str(int(i) % 2) for i in val])
+    if '11' not in u and '00' not in u:
+6. Проверка, что есть не менее трех цифр с числовым значением более 9
+    u = len([i for i in val if i not in '0123456789'])
+    if u >= 3:
+7. Кол-во пар одинаковых символов
+    sum([val[i:i+2] == 'AA' for i in range(len(val) - 1)])

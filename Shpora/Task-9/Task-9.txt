@@ -1,0 +1,63 @@
+Полезные формулы Excel:
+=СУММЕСЛИ()
+=СУММЕСЛИМН()
+=СЧЁТЕСЛИ()
+=СЧЁТЕСЛИМН()
+=МОДА()
+=НАИМЕНЬШИЙ()
+=НАИБОЛЬШИЙ()
+
+=============================================
+
+Начало решения кодом(считывание данных из файла):
+with open('input.txt') as file:
+    nums = [list(map(int, i.split())) for i in file]
+
+Полезные функции:
+1. Подсчет повторяющихся чисел
+    def f(nums):
+       cnt = [nums.count(i) for i in nums]
+       return # условие
+2. Поиск всех повторяющихся/неповторяющихся чисел
+    def f(nums):
+       nepov = [i for i in nums if nums.count(i) == 1]
+       pov = [i for i in nums if nums.count(i) != 1]
+3. Все числа различны
+    def f(nums):
+       return len(nums) == len(set(nums))
+4. 4 числа можно разбить на две пары с равными суммами
+    def f(nums):
+       return max(nums) + min(nums) == sum(nums) - max(nums)- min(nums)
+5. Разность максимального и минимального числа кратна разности оставшейся пары чисел
+    def f(nums):
+       nums = sorted(nums)
+       return nums[-2] - nums[1] != 0 and (nums[-1] - nums[0]) % (nums[-2] - nums[1]) == 0
+
+==============================================================
+
+Что попросят дать в ответ:
+
+1. Количество строк
+    cnt = 0
+    for i in arr:
+       if f1(i) and f2(i):
+           cnt += 1
+    print(cnt)
+
+2. Поиск наименьшего номера строки
+    for pos, val in enumerate(arr, start=1):
+       if f1(val) and f2(val):
+           print(pos)
+           break
+
+3. Поиск наибольшего номера строки
+    for pos, val in enumerate(arr, start=1)[::-1]:
+       if f1(val) and f2(val):
+           print(pos)
+           break
+
+4. Сумма элементов строки
+    for i in arr:
+       if f1(i) and f2(i):
+           print(sum(i))
+           break
