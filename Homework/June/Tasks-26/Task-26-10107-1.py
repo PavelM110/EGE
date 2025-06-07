@@ -1,5 +1,3 @@
-from encodings.idna import ace_prefix
-
 with open('26_10107.txt') as file:
     n = int(file.readline())
     data = [list(map(int, i.split())) for i in file if i]

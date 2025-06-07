@@ -1,0 +1,236 @@
+Сборник официальных 26х заданий:
+2022) https://kompege.ru/variant?kim=25101705
+2023) https://kompege.ru/variant?kim=25101707
+2024) https://kompege.ru/variant?kim=25101708
+2025) https://kompege.ru/variant?kim=25101709
+
+1. Чеки (4629, 4660, 4684, 6759, 17687)
+    Суть: поиск выгодной стратегии для магазина и покупателя
+    Ситуации:
+        1. Каждый M товар в чеке для магазина
+            prices.sort()
+            summ = sum(prices) - sum(prices[:N // M])
+        2. Каждый M товар в чеке для покупателя фантазера
+            prices.sort(reverse=True)
+            summ = sum(prices) - sum(prices[:N // M])
+        3. Каждый M товар в чеке для покупателя реалиста
+            prices.sort(reverse=True)
+            summ = sum(prices) - sum(prices[M - 1::M])
+
+2. Сисадмин / фура / закупка товаров (2944, 1232, 1207, 16390, 12256, 6641)
+    Суть: уместить максимальное кол-во элементов в выделенный объем пространства
+    Идея: выбирать самые маленькие элементы,
+          в конце не забыть максимально заполнить оставшееся пространство
+    Алгоритм:
+        boxes = sorted(boxes)
+        cnt = []
+        for box in boxes:
+            if box <= s:
+                s -= box
+                cnt.append(box)
+
+        s += cnt.pop()
+        boxes = sorted(boxes)[::-1]
+        for box in boxes:
+            if box <= s:
+                cnt.append(box)
+                break
+        print(len(cnt), cnt[-1])
+
+3. Коробки / торты / кольца (4604, 4712, 6031, 6056, 15341, 21424)
+    Суть: матрешка
+    Идея: рассматриваем всегда самый большой элемент из доступных
+    Алгоритм:
+        cakes = sorted(cakes)[::-1]
+        last = cakes[0]
+        cnt = 1
+        for cake in cakes:
+            if last - cake >= 8:
+                last = cake
+                cnt += 1
+        print(cnt, last)
+
+4. Лесопосадка / человеко посадка (4205, 3586, 3230, 1868)
+    Суть: выбрать рядом стоящие позиции в одном ряду
+    Идея: перебирать по два элемента, находящие на расстоянии K
+    Алгоритм:
+    trees = sorted(trees, key=lambda x: (-x[0], x[1]))
+    for tree1, tree2 in zip(trees, trees[1:]):
+        if tree1[0] == tree2[0]:
+            if tree2[1] - tree1[1] == K + 1:
+                print(tree1[0], tree1[1] + 1)
+                break
+
+5. Конференц-зал (9756, 10107)
+    Суть: провести как можно больше мероприятий
+    Идея: сортируем по времени окончания - чем раньше закончилось, тем больше проведем
+    Алгоритм:
+        events = sorted(events, key=lambda x: x[1])
+        approved = [events[0]]
+        for event in events:
+            if approved[-1][1] <= event[0]:
+                approved.append(event)
+
+        last = approved.pop()
+        print(len(approved) + 1, max(events)[0] - approved[-1][1])  # проверка есть ли выгодней разница между началом и концом
+
+
+6. Места в зале (17537, 20910)
+    Суть: найти два места в одном ряду, перед которыми все места свободны
+    Идея: для каждого места запоминаем номер ряда, перед которым никто не сидит
+    Алгоритм:
+        with open("26_17537.txt") as file:
+            n, m, k = map(int, file.readline().split())
+            suitable = [m] * (k + 1)
+            for i in file:
+                row, col = map(int, i.split())
+                suitable[col] = min(suitable[col], row - 1)  # сохраняем место на которое можем сесть
+
+        ans = []
+        for i in range(2, k + 1):
+            place1, place2 = suitable[i - 1], suitable[i]  # аппендим подходящий ряд и макс. место из пары
+            ans.append([min(place1, place2), i])
+
+        print(max(ans))
+
+
+7. Зачисление студентов / моряков / космонавтов (17565, 17881, 20815)
+    Суть: составить рейтинговый список
+    Идея: правильно отсортировать
+    Алгоритм:
+        with open("26_17565.txt") as file:
+            n, s = map(int, file.readline().split())
+            sailors = []
+            for i in file:
+                ID, b1, b2, b3, b4 = map(int, i.split())
+                sailors.append([ID, (b1 + b2 + b3), b4])
+
+        sailors = sorted(sailors, key=lambda x: (-x[1], -x[2]))
+
+        # 1
+        print(sailors[:s])
+        print(sailors[s:s + 2])      # смотрим полупроходной
+        print(len([i for i in sailors if i[1] == 154]))     # можно посмотреть глазами
+
+        # 2
+        if sailors[s - 1][1] == sailors[s][1]:
+            id_last = [sailor[0] for sailor in sailors if sailor[1] > sailors[s - 1][1]][-1]
+            cnt = len([1 for sailor in sailors if sailor[1] == sailors[s - 1][1]])
+        else:
+            id_last = sailors[s - 1][0]
+            cnt = 0
+
+        print(id_last, cnt)
+
+
+8. Лидер продаж (17643)
+    Суть: лидер продаж
+    Идея: создать словарь и по артикулу записать о нем информации
+    Алгоритм:
+        with open("26_17643.txt") as file:
+            n = int(file.readline())
+            products = {}
+            average = []
+            for i in file:
+                art, price, status = map(int, i.split())
+                average.append(price)
+                if art not in products:
+                    products[art] = [0, price, 0]
+                if status == 1:
+                    products[art][2] += 1   # кол-во остатков
+                else:
+                    products[art][0] += 1  # кол-во проданных
+
+        average = sum(average) / len(average)  # средняя цена
+        products = [i for i in products.values() if i[1] > average]  # находим в словаре и сохраняем в список дорогие товары
+
+        products = sorted(products, key=lambda x: (-x[0], -x[1], x[2]))
+        leader = products[0]
+
+        print(leader[0] * leader[1], leader[2])
+
+9. Решенные задачи (19256, 21719)
+    Суть: найти ученика с наибольшим кол-вом решенных задач в определенном порядке
+    Идея: создаем словарь множеств, куда помещаем решенные задачи каждого студента
+          перебираем каждого студента, сортируем его задачи, ищем самую длинную подходящую цепочку
+    Алгоритм:
+        with open ('26_19256.txt') as file:
+            n = int(file.readline())
+            students = {}
+            for i in file:
+                ID, num = map(int, i.split())
+                if ID not in students:
+                    students[ID] = set()
+                students[ID] |= {num}
+
+        ans = []
+        for ID in students:
+            student = sorted(students[ID])
+            cnt = 1
+            max_cnt = 0
+            for i in range(len(students) - 1):
+                task1, task2 = students[i], students[i + 1]
+                if task2 - task1 == 1:
+                        cnt += 1
+                else:
+                    cnt = 1
+                max_cnt = max(max_cnt, cnt)
+            ans.append([max_cnt, student])
+
+        ans = sorted(ans, key=lambda x: (-x[0], x[1]))
+        print(ans[0)
+
+
+10. Камеры хранения (7602, 7626, 8512)
+    Суть: определить сколько будет обслужено клиентов
+    Идея: сортируем посетителей по времени прихода, создаем список камер хранения, запоминаем, когда освободится ячейка
+    Алгоритм:
+        with open("26_7602.txt") as file:
+            k = int(file.readline())
+            n = int(file.readline())
+            clients = [list(map(int, i.split())) for i in file]
+
+        clients = sorted(clients)
+        last = 0
+        cnt = 0
+        rooms = [0] * (k + 1)
+        for c in clients:
+            for i in range(1, len(rooms)):
+                if c[0] >= rooms[i]:
+                    rooms[i] = c[1] + 1
+                    cnt += 1
+                    last = i
+                    break
+
+        print(cnt, last)
+
+
+11. Пик посещаемости (9847)
+    Суть:
+    Идея:
+    Алгоритм:
+        with open('26_9847.txt') as f:
+            N = int(f.readline())
+            arr = [list(map(int, i.split())) for i in f if i]
+
+        arr = sorted(arr)
+        day = [0] * 1441
+        for st, fn in arr:
+            for i in range(st, fn):
+                day[i] += 1
+
+        m = max(day)
+        res = []
+        for i in range(len(day)):
+            if day[i] == m:
+                res.append(i)
+
+        cnt = 1
+        for i in range(len(res) - 1):
+            p1, p2 = res[i: i + 2]
+            if p2 - p1 > 1:
+                cnt += 1
+        print(cnt, m)
+
+
+8. Детали (9793)
