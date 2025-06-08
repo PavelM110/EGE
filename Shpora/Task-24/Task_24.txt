@@ -1,0 +1,292 @@
+1. Нет стоящих рядом символов N (1975)
+    with open("24_1975.txt") as f:
+        data = f.readline()
+
+    while "PP" in data:
+        data = data.replace("PP", "P P")
+    data = data.split()
+
+    print(len(max(data, key=len)))
+
+
+2. Нет стоящих рядом символов из набора (1866, 9845, 7600, 7624, 8510, 15339)
+    with open('24_1866.txt') as f:
+        st = f.readline()
+
+    st = st.replace('ad', 'a d')
+    st = st.replace('da', 'd a')
+    st = st.split()
+
+    print(len(max(st, key=len)))
+
+
+3. Последовательность только из комбинаций символов (целиком) (3228, 3584, 2942, 4627, 4602, 4682, 4710, 6636, 6054, 6757)
+    РЕГУЛЯРКА
+    from re import *
+    with open('24_3228.txt') as f:
+        st = f.readline()
+
+    pat = r'(AC|AB)+'
+    m = [i.group() for i in finditer(pat, st)]
+
+    print(len(max(m, key=len))//2)
+
+    НЕРЕГУЛЯРКА
+    with open("24_3228.txt") as f:
+        data = f.readline()
+
+    data = data.replace("AC", "*")
+    data = data.replace("AB", "*")
+
+    for i in "ABC":
+        data = data.replace(i, " ")
+
+    data = data.split()
+
+    print(len(max(data, key=len)))
+
+
+4. Последовательность только из комбинаций символов (может быть неполной) (12254, 16388)
+    РЕГУЛЯРКА
+    from re import *
+
+    with open("24_12254.txt") as f:
+        data = f.readline().strip()
+
+    st, en = r"(SQ|Q)?", r"(RS|R)?"
+    pattern = rf"{st}(RSQ)+{en}"
+
+    data = [i.group() for i in finditer(pattern, data)]
+
+    print(len(max(data, key=len)))
+
+    НЕРЕГУЛЯРКА
+    with open('24_12254.txt') as file:
+        data = file.readline()
+
+    data = data.replace('RSQ', '@@@')
+    data = data.replace('SQ@', ' @@@')
+    data = data.replace('Q@', ' @@')
+    data = data.replace('@RS', '@@@ ')
+    data = data.replace('@R', '@@ ')
+
+    for i in 'RSQ':
+        data = data.replace(i, ' ')
+
+    data = data.split()
+
+    print(len(max(data, key=len)))
+
+
+5. Последовательность из чередующихся символов (6029)
+    РЕГУЛЯРКА
+    with open("24_6029.txt") as f:
+        data = f.readline()
+
+    pattern = r"F?(EF)+E?"
+
+    data = [i.group() for i in finditer(pattern, data)]
+
+    print(len(max(data, key=len)))
+
+    НЕРЕГУЛЯРКА
+    with open("24_6029.txt") as f:
+        data = f.readline()
+
+    while "EE" in data:
+        data = data.replace("EE", "E E")
+    while "FF" in data:
+        data = data.replace("FF", "F F")
+
+    data = data.replace("D", " ")
+
+    data = data.split()
+    print(len(max(data, key=len)))
+
+
+6. Поиск подстроки являющейся числом (9791)
+    РЕГУЛЯРКА
+    from re import *
+
+    with open('24_9791.txt') as f:
+        st = f.readline()
+
+    pat = r'[1-9A-F][0-9A-F]+'
+    m = [i.group() for i in finditer(pat, st)]
+
+    print(max(m, key=len))
+    print(len(max(m, key=len)))
+
+    НЕРЕГУЛЯРКА
+    from string import digits, ascii_uppercase
+
+    with open ('24_9791.txt') as file:
+        data = file.readline()
+
+    alph = digits + ascii_uppercase
+
+    for i in alph[16:]:
+        data = data.replace(i, ' ')
+
+    data = data.split()
+    print(len(max(data, key=len)))
+
+7. Поиск подстроки являющейся числом с условием (21908, 21421)
+    Четное число в четной системе (т.к. в четной системе четность определяется как в 10,
+    просто требуем, чтоб число оканчивалось на четную цифру)
+    РЕГУЛЯРКА
+    from re import finditer
+
+    with open("24_21908.txt") as f:
+        data = f.read()
+
+    pat = r"[1-9ABCD][0-9ABCD]+[02468AC]"
+
+    ans = []
+
+    for i in finditer(pat, data):
+        ans.append(len(i.group()))
+
+    print(max(ans))
+
+    Четное число в нечетной системе (в нечетных системах четность определяется по сумме цифр:
+    если сумма четная, то и число четное) а также включает тип с любой делимостью при любой четности системы
+    НО ЛУЧШЕ НИЧЕГО НЕ СЧИТАТЬ, А ПРОСТО ПЕРЕВЕСТИ В 10 СИТЕМУ :)))
+    Пример - найти самое длинное четное число в 13й системе счисления
+    from re import finditer
+
+    with open("24_21908.txt") as f:
+        data = f.read()
+
+    pat = r"[1-9ABC][0-9ABC]+"
+
+    matches = [match.group() for match in finditer(pat, data)]
+
+    ans = 0
+    for match in matches:
+        if int(match, 13) % 2 == 0:
+            ans = max(ans, len(match))
+        elif len(match) > ans:
+            for l in range(len(match)):
+                for r in range(len(match), l, - 1):
+                    sub_str = match[l:r].lstrip('0')
+                    # sub_str - проверяем, что не пустой, а то int ругаться будет
+                    if sub_str and int(sub_str, 13) % 2 == 0:
+                        ans = max(ans, len(sub_str))
+                        break
+    print(ans)
+
+
+8. Максимальное кол-во символов, в которых один символ встречается N раз (9753, 10105)
+    with open("24_9753.txt") as f:
+        data = f.readline()
+
+    data = data.split("Y")
+    # в range минусуем N
+    # в data правая граница N + 1
+    ans = []
+    for i in range(len(data) - 150):
+        s = "Y".join(data[i:i + 151])
+        ans.append(len(s))
+
+    print(max(ans))
+
+
+9. Максимальное кол-во символов, в которых комбинация символов встречается N раз (17535, 19254, 20909)
+    with open("24_17535.txt") as file:
+        data = file.readline()
+
+    data = data.split("CD")
+    # в range минусуем N
+    # в data правая граница N + 1
+    ans = 0
+    for i in range(len(data) - 160):
+        s = "CD".join(data[i:i + 161])
+        ans = max(ans, len(s))
+
+    # делаем такой плюс - (длина последовательности символов - 1) * 2
+    print(ans + 2)
+
+
+10. Минимальное кол-во символов, в которых один символ встречается N раз ()
+11. Минимальное кол-во символов, в которых комбинация символов встречается N раз (21717)
+    РЕШЕНИЕ С ИГНОРОМ УСЛОВИЯ С Q (ОБЩИЙ СЛУЧАЙ)
+    with open("24_21717.txt") as f:
+        data = f.read()
+
+    data = data.split("RSQ")
+
+    # в range минусуем N
+    # в data правая граница N
+    ans = []
+    for i in range(1, len(data) - 129):
+        s = "RSQ" + "RSQ".join(data[i:i + 129]) + "RSQ"
+        ans.append(len(s))
+
+    print(min(ans))
+
+    РЕШЕНИЕ ЗАДАЧИ 21717
+    with open('txt/24_21717.txt') as file:
+        st = file.readline()
+
+    st = st.split('RSQ')
+    ans = 100000
+    for i in range(len(st) - 129):
+        l = 'RSQ' + 'RSQ'.join(st[i:i+129]) + 'RSQ'
+        konec = st[i+129]
+        cnt = 0
+        for j in konec:
+            cnt += 1
+            if j != 'Q':
+                break
+        if not konec:
+            cnt += 1
+        ans = min(ans, len(l) + cnt)
+    print(ans)
+
+12. Поиск арифметического выражения (17563, 17878, 20813)
+    from re import finditer
+
+    with open("24_17563.txt") as f:
+        data = f.read()
+
+    number_natural = r'[1-9][0-9]*'
+    number_not_natural = r'([1-9][0-9]*|0)'
+    p = fr'({number}[*-])+{number}'
+
+    base = finditer(p, data)
+
+    lines = [i.group() for i in base]
+
+    print(len(max(lines, key=len)))
+
+
+13. Поиск арифметического выражения с условием (17641, 17685)
+
+    from re import *
+    from string import *
+
+    with open("24_17641.txt") as f:
+        data = f.readline()
+
+    num = r"([1-9][0-9]*|0)"
+    pattern = rf"{num}([+*]{num})+"
+
+    data = [i.group() for i in finditer(pattern, data)]
+
+    ans = 0
+    for match in data:
+        if eval(match) == 0:
+            ans = max(ans, len(match))
+        elif len(match) > ans:
+            for l in range(len(match)):
+                for r in range(len(match), l, -1):
+                    sub_str = match[l:r].strip("+*")
+                    if len(sub_str) < 2 or sub_str[0] == "0" and sub_str[1] in digits:
+                        break
+                    if eval(sub_str) == 0:
+                        ans = max(ans, len(match))
+                        break
+
+    print(ans)
+

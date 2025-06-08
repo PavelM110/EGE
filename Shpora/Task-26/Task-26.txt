@@ -234,3 +234,28 @@
 
 
 8. Детали (9793)
+    Суть: Расположение деталей на конвейере
+    Идея: внимательно читать условие
+    Алгоритм:
+        with open('26_9793.txt') as file:
+            N = int(file.readline())
+            details = []
+            for pos, val in enumerate(file, start=1):
+                sh, po = map(int, val.split())
+                details.append([sh, 1, pos])
+                details.append([po, 0, pos])
+
+        details.sort()
+
+        conveyor = [0] * N
+        last = 0
+        for time, type, num in details:
+            if num not in conveyor:
+                if type:
+                    vacant = conveyor.index(0)
+                    conveyor[vacant] = num
+                else:
+                    vacant = conveyor[::-1].index(0)
+                    conveyor[N - vacant - 1] = num
+                last = num
+        print(last, conveyor.index(last))
