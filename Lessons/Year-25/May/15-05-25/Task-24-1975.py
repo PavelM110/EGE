@@ -5,7 +5,6 @@ with open('24_1975.txt') as file:
 
 pat = r'[^P]*(P[^P]+)+P?'
 
-
 matches = finditer(pat, data)
 
 print(len(max([i.group() for i in matches], key=len)))

@@ -46,6 +46,9 @@ for i in range(len(data)):
         else:
             last_invalid = i
             stack.clear()
+    else:
+        if not stack:
+            last_invalid = i
 
 print(ans)
 

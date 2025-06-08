@@ -1,6 +1,5 @@
 from string import ascii_uppercase
 from re import *
-from itertools import combinations
 
 with open('24_9791 (1).txt') as file:
     data = file.readline()
