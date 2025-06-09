@@ -4,7 +4,7 @@ with open('26_7456.txt') as file:
 
 def f(row):
     good = []
-    row = sorted(row, reverse=True)
+    row = sorted(row)
     if len(row) == 2: return []
     if len(row) == 3:
         return [row[1]] if row[1] - row[0] == 6 and row[2] - row[1] == 6 else []
@@ -17,11 +17,8 @@ rows = [[] for i in range(max(i[0] for i in data) + 1)]
 cnt = 0
 ans1 = 0
 
-
-
 for r, p in data:
     rows[r].append(p)
-
 
 
 print(sorted(max(rows)))
